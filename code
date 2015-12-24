@@ -1,3 +1,5 @@
+t = raw_input('Enter the string ')
+s = raw_input('Enter the substring ')
 def prefix(s):
     v = [0]*len(s)
     for i in xrange(1,len(s)):
@@ -24,3 +26,7 @@ def kmp(s,t):
     return index
     
 print(kmp(s,t))    
+if kmp(s,t) == -1:
+print('Substring not found')
+else:
+print'Substring in the string starts with a number {0} '.format(kmp(s,t))
